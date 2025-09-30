@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul{
+  background-color: aliceblue;
+}
+ol{
+  background-color: aliceblue;
+}
+.mylist{
+  background-color: aliceblue;
+  width:250px;
+}
+</style>
+</head>
+<body>
+ 
+ <div id="navbar-container">
+
+ </div>
+
+ <h2>The list-style-image Property</h2>
+
+  <h2>Name of the countries alphabetically</h>
+  <div class="mylist"> 
+  
+  <ol>America</ol><br>
+  <ol>Brazil</ol><br>
+  <ol>Canada</ol><br>
+  <ol>Denmark</ol><br>
+  <ol>England</ol><br>
+  <ol>France</ol><br>
+  <ol>Greece</ol><br>
+  <ol>Hungary</ol><br>
+  <ol>India</ol><br>
+  <ol>Japan</ol><br>
+  <ol>Kuwait</ol><br>
+  <ol>Lebanon</ol><br>
+  <ol>Maldives</ol><br>
+  <ol>Netherlands</ol><br>
+  <ol>Oman</ol><br>
+  <ol>Poland</ol><br>
+  <ol>Qatar</ol><br>
+  <ol>Russia</ol><br>
+  <ol>Switzerland</ol><br>
+  <ol>Turkey</ol><br>
+  <ol>Ugande</ol><br>
+  <ol>Vietnam</ol><br>
+  <ol>Wales</ol><br>
+  <ol>Yemen</ol><br>
+  <ol>Zimbabwe</ol><br>
+  
+</div>
+
+<script>
+    fetch('../nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+
+</body>
+</html>

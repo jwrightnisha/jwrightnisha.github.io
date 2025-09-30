@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar-container"></div> 
+<h1>Hello World it's me Zoha Ali.</h1>
+<P>I am 16 years old and studying in St.Peter Catholic High School</P>
+<p>My hobby is exploring new things.</p>
+<p>My dream house is the picture shown below.</p>
+<img src="img/Stella_Maris_Exterior.jpg" alt="Dream Home" width="500" >
+<a href="c:\Users\baigzoha41\Downloads\Stella_Maris_Exterior.jpg"></a>
+
+<script>
+    fetch('../nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+</body>
+</html>

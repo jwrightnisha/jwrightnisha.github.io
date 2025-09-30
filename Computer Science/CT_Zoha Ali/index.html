@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id="navbar-container"></div>
+    <form action="login()">
+  <label for="email">email:</label><br>
+  <input type="text" id="email" name="email" size="27"><br>
+  <label for="pswd">Password:</label><br>
+  <input type="text" id="pswd" name="pswd" maxlength="27" size="27"><br><br>
+   <button onclick = "login()">login</button>
+    <script>
+        function login(){
+            alert("Success");
+        }
+    </script>    
+<script>
+    fetch('../nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+</form>
+  
